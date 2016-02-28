@@ -50,38 +50,6 @@ def load_login_data():
     print "LOADED ICLOUD PROFILE: ", LOGIN_DATA['login'], ":", LOGIN_DATA['pass']
 
 
-OUTPUT = """
-[api devices:]
- {
-    u'Zi9cVH+SMYWAwGV2THGyIEERj4nJLVqnxKDC5qqB6P0KX0GIuayEQOHYVNSUzmWV': <AppleDevice(iPhone 6: Tamcia )>
- }
----------------------------------------------------------
-[api iphone:]
-iPhone 6: Tamcia
----------------------------------------------------------
-[api.iphone.location():]
- {
-    u'timeStamp': 1456687186509L,
-    u'locationFinished': True,
-    u'longitude': 18.5679437779063,
-    u'positionType': u'GPS',
-    u'locationType': None,
-    u'latitude': 54.4446849078447,
-    u'isOld': False,
-    u'isInaccurate': False,
-    u'horizontalAccuracy': 50.0
- }
----------------------------------------------------------
-[api.iphone.status():]
- {
-    'deviceDisplayName': u'iPhone 6',
-    'deviceStatus': u'201',
-    'batteryLevel': 0.76,
-    'name': u'Tamcia '
- }
-"""
-
-
 def temp_location():
     return {
         'timeStamp': 1456687186509L,
@@ -193,7 +161,6 @@ def alarm(sound):
     clip.play()
     time.sleep(min(30, clip.seconds()))
     clip.stop()
-    print "EXIT"
 
 
 def sleeper():
@@ -220,7 +187,6 @@ def sleeper():
         if float(ROZNICA) < 5.0:
             print "[", str(COUNTER), "][R<1m][BEZ ZMIAN][ODLEGLOSC:", str(CURR_DIST['vincent']), "ROZNICA:  ", str(
                 ROZNICA), "  ]", "   >", CURR_DIST['adres']
-            print "1"
             alarm(1)
         else:
             # OBJECT IS APPROACHING
