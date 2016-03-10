@@ -12,17 +12,12 @@ DO ZAIMPLEMTOWANIA
 
 """
 from __future__ import absolute_import
-import json
 import time
+
 from pyicloud import PyiCloudService
 from geopy.geocoders import Nominatim
-from geoip import geolite2
-from geoip import open_database
 from geopy.distance import vincenty
 from geopy.distance import great_circle
-import os
-import sys
-import time
 import mp3play
 
 CONSOLE_LOG = False
@@ -31,6 +26,7 @@ SYRKOMLI = {
     'latitude': 54.503501,
     'longitude': 18.542396
 }
+
 
 def log(text):
     if CONSOLE_LOG is True:
@@ -75,7 +71,7 @@ def temp_status():
 
 def distance_handler(location_obj):
     geolocator = Nominatim()
-    input_data=str(location_obj['latitude'])+", "+str(location_obj['longitude'])
+    input_data = str(location_obj['latitude']) + ", " + str(location_obj['longitude'])
     log("[Input location str:" + input_data)
     location = geolocator.reverse(input_data)
     adres = location.address
@@ -101,6 +97,7 @@ def distance_handler(location_obj):
         'circle': circle,
         'adres': adres
     }
+
 
 #
 # def geoip():
@@ -145,7 +142,8 @@ COUNTER = 0
 LAST_DIST = {}
 
 
-def alarm(sound):
+def alarm(sound=None, speak=None):
+
     SOUNDS_NAMES = [
         '24483^pchick-alarm.mp3',
         '35752^CarAlarmSet.mp3',
@@ -156,7 +154,27 @@ def alarm(sound):
         '97744^ALARM.mp3',
     ]
 
-    filename = SOUNDS_NAMES[int(sound)]
+    SPEAK = {
+        'mniejniz2km': 'mniejniz2km.mp3',
+        'mniejniz4': 'mniejniz4.mp3',
+        'objectsiezbliza': 'objectsiezbliza.mp3',
+        'objectsiezblizaszybko': 'objectsiezblizaszybko.mp3',
+        'objektznajdujesiewodleglosc': 'objektznajdujesiewodleglosc.mp3'
+    }
+    SPOKEN = {
+        'mniejniz2km.mp3',
+        'mniejniz4.mp3',
+        'objectsiezbliza.mp3',
+        'objectsiezblizaszybko.mp3',
+        'objektznajdujesiewodleglosc.mp3'
+    }
+
+    if sound==100:
+        filename = SPOKEN[int(sound)]
+
+    else:
+        filename = SOUNDS_NAMES[int(sound)]
+
     clip = mp3play.load(filename)
     clip.play()
     time.sleep(min(30, clip.seconds()))
@@ -176,6 +194,17 @@ def sleeper():
 
         CURR_DIST = distance_handler(location)
         ROZNICA = abs(CURR_DIST['vincent'] - LAST_DIST['vincent'])
+
+        last_interval = interval
+        if int(CURR_DIST['vincent']) > 30000:
+            interval = 180
+        elif int(CURR_DIST['vincent']) > 10000:
+            interval = 120
+        else:
+            interval = 60
+        if interval != last_interval:
+            print "INTERVAL CHANGE ------...........................................................................................!"
+
 
         # OBJECT IS MOVING FAST!
         if float(ROZNICA) > 100.0:
@@ -211,6 +240,7 @@ def sleeper():
                 # UNDER 2000 METER
                 if CURR_DIST['vincent'] < 2000:
                     alarm(6)
+                    alarm(100, 0)
                     print "\n MNIEJ NIZ 2 KM ZOSTALO!!!!\n"
 
             # OBJECT IS MOVING AWAY!
@@ -219,8 +249,9 @@ def sleeper():
                     CURR_DIST['vincent']), "  [ROZNICA:  ", str(ROZNICA), "  ]   >", CURR_DIST['adres']
                 alarm(5)
 
-        time.sleep(60)
+        time.sleep(interval)
         LAST_DIST = CURR_DIST
+
 
 # run()
 # geoip()
