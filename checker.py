@@ -13,6 +13,7 @@ DO ZAIMPLEMTOWANIA
 """
 from __future__ import absolute_import
 import time
+import os
 
 from pyicloud import PyiCloudService
 from geopy.geocoders import Nominatim
@@ -138,121 +139,226 @@ def distance_handler(location_obj):
 #     distance_handler(temp_location())
 
 FIRSTRUN = True
-COUNTER = 0
-LAST_DIST = {}
 
 
-def alarm(sound=None, speak=None):
+def alarm(sound=None, type=None):
+    THIS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 
-    SOUNDS_NAMES = [
-        '24483^pchick-alarm.mp3',
-        '35752^CarAlarmSet.mp3',
-        '44216^alarm.mp3',
-        '71766^alarm.mp3',
-        '86502^alarm.mp3',
-        '91540^caralarm.mp3',
-        '97744^ALARM.mp3',
-    ]
+    def get_speed_sound(level):
+        speed_level_sound_obj = {
+            0: '0_Blop-Mark_DiAngelo-79054334.mp3',
+            1: '1_Cartoon Walking-SoundBible.com-2130722123.mp3',
+            2: '2_Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3',
+            3: '3_Galloping Horse-SoundBible.com-1411555122.mp3',
+            4: '4_CarAcceleratingSoundBible.com-28596349.mp3',
+            5: '5_Train_Approach_n_Pass-Mike_Koenig-678807208.mp3',
+            6: '6_Healicopter_Approach-Mike_Koenig-1395051800.mp3',
+        }
+        sound_path = os.path.abspath(os.path.join(THIS_DIR, 'sounds', 'SPEED', speed_level_sound_obj[level]))
+        return sound_path
 
-    SPEAK = {
-        'mniejniz2km': 'mniejniz2km.mp3',
-        'mniejniz4': 'mniejniz4.mp3',
-        'objectsiezbliza': 'objectsiezbliza.mp3',
-        'objectsiezblizaszybko': 'objectsiezblizaszybko.mp3',
-        'objektznajdujesiewodleglosc': 'objektznajdujesiewodleglosc.mp3'
-    }
-    SPOKEN = {
-        'mniejniz2km.mp3',
-        'mniejniz4.mp3',
-        'objectsiezbliza.mp3',
-        'objectsiezblizaszybko.mp3',
-        'objektznajdujesiewodleglosc.mp3'
-    }
+    def get_speak_sound(level):
+        spoken_sound_obj = {
+            0: 'mniejniz2km.mp3',
+            1: 'mniejniz4.mp3',
+            2: 'objectsiezbliza.mp3',
+            3: 'objectsiezblizaszybko.mp3',
+            4: 'objektznajdujesiewodleglosc.mp3'
+        }
 
-    if sound==100:
-        filename = SPOKEN[int(sound)]
+        sound_path = os.path.abspath(os.path.join(THIS_DIR, 'sounds', 'SPEAK', spoken_sound_obj[level]))
+        return sound_path
 
+    def get_alarm_sound(level):
+        alarm_sound_obj = {
+            0: '24483^pchick-alarm.mp3',
+            1: '35752^CarAlarmSet.mp3',
+            2: '44216^alarm.mp3',
+            3: '71766^alarm.mp3',
+            4: '86502^alarm.mp3',
+            5: '91540^caralarm.mp3',
+            6: '97744^ALARM.mp3',
+        }
+
+        sound_path = os.path.abspath(os.path.join(THIS_DIR, 'sounds', 'ALARMS', alarm_sound_obj[level]))
+        return sound_path
+
+
+    def player(filename):
+        clip = mp3play.load(filename)
+        clip.play()
+        time.sleep(min(30, clip.seconds()))
+        clip.stop()
+
+    if type == "speed":
+        player(get_speed_sound(sound))
+    elif type == "speak":
+        player(get_speak_sound(sound))
     else:
-        filename = SOUNDS_NAMES[int(sound)]
-
-    clip = mp3play.load(filename)
-    clip.play()
-    time.sleep(min(30, clip.seconds()))
-    clip.stop()
+        player(get_alarm_sound(sound))
 
 
-def sleeper():
-    load_login_data()
-    api = PyiCloudService(LOGIN_DATA['login'], LOGIN_DATA['pass'])
-    global COUNTER, LAST_DIST, FIRSTRUN
-    while True:
-        COUNTER += 1
-        location = api.iphone.location()
-        if FIRSTRUN is True:
-            LAST_DIST = distance_handler(location)
-            FIRSTRUN = False
+def runner():
+    def get_location():
+        try:
+            location = api.iphone.location()
+            if len(location) > 0:
+                print "[LOCATION OBJECT SUCCESSFULLY RECEIVED FROM ICLOUD API!]"
+                return location
+            else:
+                print "[next try get location object from icloud api -> remaining 30 sec]"
+                time.sleep(30)
+                return get_location()
+        except Exception as e:
+            print "[next try get location object from icloud api -> remaining 30 sec][e:", str(e), "]"
+            time.sleep(30)
+            return get_location()
 
-        CURR_DIST = distance_handler(location)
-        ROZNICA = abs(CURR_DIST['vincent'] - LAST_DIST['vincent'])
+    def get_speed_level(difference):
+        speed_level_obj = {
+            0: "no_motion",
+            1: "veryslow",
+            2: "slow",
+            3: "mid",
+            4: "fast",
+            5: "veryfast",
+            6: "ultrafast"
+        }
+
+        def out(level):
+            log("[Speed level => " + speed_level_obj[level])
+            return level
+
+        if difference < 20:
+            return out(0)
+        elif difference < 30:
+            return out(1)
+        elif difference < 40:
+            return out(2)
+        elif difference < 50:
+            return out(3)
+        elif difference < 70:
+            return out(4)
+        elif difference < 150:
+            return out(5)
+        else:
+            return out(6)
+
+    def get_interval(difference, curr_distance_obj, interval):
 
         last_interval = interval
-        if int(CURR_DIST['vincent']) > 30000:
-            interval = 180
-        elif int(CURR_DIST['vincent']) > 10000:
-            interval = 120
+        speed_level = get_speed_level(difference)
+        base = 120
+
+        if speed_level > 0:
+            base_interval = base / speed_level
         else:
-            interval = 60
-        if interval != last_interval:
-            print "INTERVAL CHANGE ------...........................................................................................!"
-
-
-        # OBJECT IS MOVING FAST!
-        if float(ROZNICA) > 100.0:
-            print 20 * "---"
-            print "\n\n" + 20 * "!X![ROZNICA>100!X!" + "\n\n"
-            alarm(2)
-
-        # OBJECT IS NOT MOVING
-        if float(ROZNICA) < 5.0:
-            print "[", str(COUNTER), "][R<1m][BEZ ZMIAN][ODLEGLOSC:", str(CURR_DIST['vincent']), "ROZNICA:  ", str(
-                ROZNICA), "  ]", "   >", CURR_DIST['adres']
-            alarm(1)
+            base_interval = 180
+        if int(curr_distance_obj['vincent']) < 1500:
+            new_interval = [base_interval / 2, 0]
+        elif int(curr_distance_obj['vincent']) < 5000:
+            new_interval = [base_interval, 1]
+        elif int(curr_distance_obj['vincent']) < 10000:
+            new_interval = [base_interval * 2, 2]
+        elif int(curr_distance_obj['vincent']) < 20000:
+            new_interval = [base_interval * 3, 3]
+        elif int(curr_distance_obj['vincent']) < 40000:
+            new_interval = [base_interval * 4, 4]
+        elif int(curr_distance_obj['vincent']) < 60000:
+            new_interval = [base_interval * 5, 5]
+        elif int(curr_distance_obj['vincent']) < 100000:
+            new_interval = [base_interval * 10, 6]
         else:
-            # OBJECT IS APPROACHING
-            if CURR_DIST['vincent'] < LAST_DIST['vincent']:
+            new_interval = [60 * 60, 7]
 
-                if float(ROZNICA) < 20.0:
-                    alarm(3)
-                    print "!PONAD 20 METROW!!!UWAGA[", str(COUNTER), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
-                        CURR_DIST['vincent']), " [ROZNICA::::>  ", str(ROZNICA), "  ]   >", CURR_DIST['adres'], "\n"
-                elif float(ROZNICA) < 30.0:
-                    print "\n!!!!!!!!!!!!!! 20- 30 METROW)\nUWAGA[", str(
-                        COUNTER), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
-                        CURR_DIST['vincent']), " [ROZNICA::::>  ", str(ROZNICA), "  ]   >", CURR_DIST['adres']
-                    alarm(0)
-                else:
+        log("[Next check interval => " + str(new_interval) + "sec.]")
+        return new_interval
 
-                    alarm(4)
-                    print "\n\n" + 500 * "!!!" + "\n\n"
-                    print "UWAGA PONAD 30M na minute[", str(COUNTER), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
-                        CURR_DIST['vincent']), " [ROZNICA::::>  ", str(ROZNICA), "  ]   >", CURR_DIST['adres']
+    def printer(counter, difference, distance, adres=None):
+        output= "\n[ " + str(counter) + " ][Difference: " + str(int(difference)) + " ][Distance: " + str(distance)+"]"
+        if adres is not None:
+            output+="[Adres: "+str(adres)+"]"
+        print output
 
-                # UNDER 2000 METER
-                if CURR_DIST['vincent'] < 2000:
-                    alarm(6)
-                    alarm(100, 0)
-                    print "\n MNIEJ NIZ 2 KM ZOSTALO!!!!\n"
+    def main_loop(current_location_obj):
+        interval, counter = 60, 0
+        last_distance_obj = current_location_obj
 
-            # OBJECT IS MOVING AWAY!
-            else:
-                print "UWAGA[", str(COUNTER), "][R>1m][OBJEKT SIE ODDALA!][ODLEGLOSC:", str(
-                    CURR_DIST['vincent']), "  [ROZNICA:  ", str(ROZNICA), "  ]   >", CURR_DIST['adres']
-                alarm(5)
+        while True:
+            counter += 1
+            location = api.iphone.location()
+            curr_distance_obj = distance_handler(location)
 
-        time.sleep(interval)
-        LAST_DIST = CURR_DIST
+            difference = abs(curr_distance_obj['vincent'] - last_distance_obj['vincent'])
+            interval = get_interval(difference, curr_distance_obj, interval)[0]
+            interval_level = get_interval(difference, curr_distance_obj, interval)[1]
+            alarm(interval_level,"speed")
+            printer(counter, difference, curr_distance_obj['vincent'], curr_distance_obj['adres'])
+
+            # # OBJECT IS MOVING FAST!
+            # if float(difference) > 100.0:
+            #     print 20 * "---"
+            #     print "\n\n" + 20 * "!X![difference>100!X!" + "\n\n"
+            #     alarm(2)
+            #
+            # # OBJECT IS NOT MOVING
+            # if float(difference) < 5.0:
+            #     print "[", str(counter), "][R<1m][BEZ ZMIAN][ODLEGLOSC:", str(
+            #         curr_distance_obj['vincent']), "difference:  ", str(
+            #         difference), "  ]", "   >", curr_distance_obj['adres']
+            #     alarm(1)
+            # else:
+            #     # OBJECT IS APPROACHING
+            #     if curr_distance_obj['vincent'] < last_distance_obj['vincent']:
+            #
+            #         if float(difference) < 20.0:
+            #             alarm(3)
+            #             print "!PONAD 20 METROW!!!UWAGA[", str(
+            #                 counter), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
+            #                 curr_distance_obj['vincent']), " [difference::::>  ", str(difference), "  ]   >", \
+            #                 curr_distance_obj['adres'], "\n"
+            #         elif float(difference) < 30.0:
+            #             print "\n!!!!!!!!!!!!!! 20- 30 METROW)\nUWAGA[", str(
+            #                 COUNTER), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
+            #                 curr_distance_obj['vincent']), " [difference::::>  ", str(difference), "  ]   >", \
+            #                 curr_distance_obj['adres']
+            #             alarm(0)
+            #         else:
+            #
+            #             alarm(4)
+            #             print "\n\n" + 500 * "!!!" + "\n\n"
+            #             print "UWAGA PONAD 30M na minute[", str(
+            #                 COUNTER), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
+            #                 curr_distance_obj['vincent']), " [difference::::>  ", str(difference), "  ]   >", \
+            #                 curr_distance_obj['adres']
+
+                #     # UNDER 2000 METER
+                #     if curr_distance_obj['vincent'] < 2000:
+                #         alarm(6)
+                #         alarm(100, 0)
+                #         print "\n MNIEJ NIZ 2 KM ZOSTALO!!!!\n"
+                #
+                # # OBJECT IS MOVING AWAY!
+                # else:
+                #     print "UWAGA[", str(counter), "][R>1m][OBJEKT SIE ODDALA!][ODLEGLOSC:", str(
+                #         curr_distance_obj['vincent']), "  [difference:  ", str(difference), "  ]   >", \
+                #         curr_distance_obj['adres']
+                #     alarm(5)
+
+            time.sleep(interval)
+            last_distance_obj = curr_distance_obj
+
+    # LOOP STARTER
+    load_login_data()
+    api = PyiCloudService(LOGIN_DATA['login'], LOGIN_DATA['pass'])
+
+    print "[STARTING MAIN LOOP]"
+    try:
+        main_loop(distance_handler(get_location()))
+    except Exception as e:
+        print "FAILED MAIN LOOP STARTING E:", str(e)
 
 
 # run()
 # geoip()
-sleeper()
+runner()
