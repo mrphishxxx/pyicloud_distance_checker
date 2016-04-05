@@ -2,15 +2,9 @@
 # -*- encoding: utf-8 -*-
 import sys
 import time
-import settings
 
 
-def log(*args):
-    if settings.DEBUG_CONSOLE_LOGS is True:
-        print('commands received: %s' % (
-            ', '.join(['%s' % et for et in args]),
-        ))
-
+# import settings
 
 # Print iterations progress
 def printProgress(iteration, total, prefix='', suffix='', decimals=2, barLength=100):
@@ -30,28 +24,13 @@ def printProgress(iteration, total, prefix='', suffix='', decimals=2, barLength=
     if iteration == total:
         print("\n")
 
-def sleeper():
-    while True:
-        # Get user input
-        num = input('How long to wait: ')
-
-        # Try to convert it to a float
-        try:
-            num = float(num)
-        except ValueError:
-            print('Please enter in a number.\n')
-            continue
-
-        # Run our time.sleep() command,
-        # and show the before and after time
-        print('Before: %s' % time.ctime())
-        time.sleep(num)
-        print('After: %s\n' % time.ctime())
-
 
 def timecounter(interval):
     for i in range(0, interval):
         printProgress(i, interval, prefix='', suffix='', decimals=2, barLength=100)
         time.sleep(1)
-        # print "time over RESTART"
-        # timecounter(interval)
+    print "time over RESTART"
+    timecounter(interval)
+
+
+timecounter(10)

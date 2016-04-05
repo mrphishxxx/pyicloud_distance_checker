@@ -9,10 +9,7 @@ DO ZAIMPLEMTOWANIA
 
 """
 from __future__ import absolute_import
-import sys
 import time
-import datetime
-
 import os
 from _exceptions.exceptions import *
 from pyicloud import PyiCloudService
@@ -21,8 +18,8 @@ from geopy.distance import vincenty
 from geopy.distance import great_circle
 import mp3play
 
-CONSOLE_LOG = False
-DEBUGGING = False
+CONSOLE_LOG = True
+DEBUGGING = True
 SYRKOMLI = {
     'latitude': 54.503501,
     'longitude': 18.542396
@@ -100,7 +97,7 @@ def distance_handler(location_obj):
     }
 
 
-
+#
 # def geoip():
 #     """
 #     ... after downloading the package, you need to import win_inet_pton in \Lib\site-packages\geoip.py and works like a charm.
@@ -119,7 +116,7 @@ def distance_handler(location_obj):
 #         with open_database('data/GeoLite2-City.mmdb') as db:
 #             match = db.lookup_mine()
 #             print 'My IP info:', match
-
+#
 # def run():
 #     # load_login_data()
 #     # api = PyiCloudService(LOGIN_DATA['login'], LOGIN_DATA['pass'])
@@ -183,7 +180,6 @@ def alarm(sound=None, type=None):
 
         sound_path = os.path.abspath(os.path.join(THIS_DIR, 'sounds', 'ALARMS', alarm_sound_obj[level]))
         return sound_path
-
 
     def player(filename):
         clip = mp3play.load(filename)
@@ -249,32 +245,32 @@ def runner():
         else:
             return out(6)
 
-    def get_interval(difference, curr_distance_obj, interval=None):
+    def get_interval(difference, curr_distance_obj, interval):
 
         last_interval = interval
         speed_level = get_speed_level(difference)
         base = 120
 
-        # if speed_level > 0:
-        #     base_interval = base / speed_level
-        # else:
-        #     base_interval = 180
-        # if int(curr_distance_obj['vincent']) < 1500:
-        #     new_interval = [base_interval / 2, 0, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 5000:
-        #     new_interval = [base_interval, 1, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 10000:
-        #     new_interval = [base_interval * 2, 2, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 20000:
-        #     new_interval = [base_interval * 3, 3, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 40000:
-        #     new_interval = [base_interval * 4, 4, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 60000:
-        #     new_interval = [base_interval * 5, 5, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 100000:
-        #     new_interval = [base_interval * 10, 6, speed_level]
-        # else:
-        #     new_interval = [60 * 60, 7]
+        if speed_level > 0:
+            base_interval = base / speed_level
+        else:
+            base_interval = 180
+        if int(curr_distance_obj['vincent']) < 1500:
+            new_interval = [base_interval / 2, 0, speed_level]
+        elif int(curr_distance_obj['vincent']) < 5000:
+            new_interval = [base_interval, 1, speed_level]
+        elif int(curr_distance_obj['vincent']) < 10000:
+            new_interval = [base_interval * 2, 2, speed_level]
+        elif int(curr_distance_obj['vincent']) < 20000:
+            new_interval = [base_interval * 3, 3, speed_level]
+        elif int(curr_distance_obj['vincent']) < 40000:
+            new_interval = [base_interval * 4, 4, speed_level]
+        elif int(curr_distance_obj['vincent']) < 60000:
+            new_interval = [base_interval * 5, 5, speed_level]
+        elif int(curr_distance_obj['vincent']) < 100000:
+            new_interval = [base_interval * 10, 6, speed_level]
+        else:
+            new_interval = [60 * 60, 7]
 
         log("[Next check interval => " + str(new_interval) + "sec.]")
         return new_interval
@@ -289,17 +285,6 @@ def runner():
         except Exception as e:
             print e
             raise
-
-        try:
-            fo = open("log.txt", "a")
-            fo.write(str(datetime.datetime.now()) + "::::" + output)
-            fo.close()
-        except Exception as e:
-            print e
-
-
-
-
 
     def main_loop(current_location_obj):
         interval, counter = 60, 0
@@ -332,42 +317,42 @@ def runner():
                 print e.message
                 # raise PrinterException("raise printer exception")
 
-            # # OBJECT IS MOVING FAST!
-            # if float(difference) > 100.0:
-            #     print 20 * "---"
-            #     print "\n\n" + 20 * "!X![difference>100!X!" + "\n\n"
-            #     alarm(2)
-            #
-            # # OBJECT IS NOT MOVING
-            # if float(difference) < 5.0:
-            #     print "[", str(counter), "][R<1m][BEZ ZMIAN][ODLEGLOSC:", str(
-            #         curr_distance_obj['vincent']), "difference:  ", str(
-            #         difference), "  ]", "   >", curr_distance_obj['adres']
-            #     alarm(1)
-            # else:
-            #     # OBJECT IS APPROACHING
-            #     if curr_distance_obj['vincent'] < last_distance_obj['vincent']:
-            #
-            #         if float(difference) < 20.0:
-            #             alarm(3)
-            #             print "!PONAD 20 METROW!!!UWAGA[", str(
-            #                 counter), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
-            #                 curr_distance_obj['vincent']), " [difference::::>  ", str(difference), "  ]   >", \
-            #                 curr_distance_obj['adres'], "\n"
-            #         elif float(difference) < 30.0:
-            #             print "\n!!!!!!!!!!!!!! 20- 30 METROW)\nUWAGA[", str(
-            #                 COUNTER), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
-            #                 curr_distance_obj['vincent']), " [difference::::>  ", str(difference), "  ]   >", \
-            #                 curr_distance_obj['adres']
-            #             alarm(0)
-            #         else:
-            #
-            #             alarm(4)
-            #             print "\n\n" + 500 * "!!!" + "\n\n"
-            #             print "UWAGA PONAD 30M na minute[", str(
-            #                 COUNTER), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
-            #                 curr_distance_obj['vincent']), " [difference::::>  ", str(difference), "  ]   >", \
-            #                 curr_distance_obj['adres']
+                # # OBJECT IS MOVING FAST!
+                # if float(difference) > 100.0:
+                #     print 20 * "---"
+                #     print "\n\n" + 20 * "!X![difference>100!X!" + "\n\n"
+                #     alarm(2)
+                #
+                # # OBJECT IS NOT MOVING
+                # if float(difference) < 5.0:
+                #     print "[", str(counter), "][R<1m][BEZ ZMIAN][ODLEGLOSC:", str(
+                #         curr_distance_obj['vincent']), "difference:  ", str(
+                #         difference), "  ]", "   >", curr_distance_obj['adres']
+                #     alarm(1)
+                # else:
+                #     # OBJECT IS APPROACHING
+                #     if curr_distance_obj['vincent'] < last_distance_obj['vincent']:
+                #
+                #         if float(difference) < 20.0:
+                #             alarm(3)
+                #             print "!PONAD 20 METROW!!!UWAGA[", str(
+                #                 counter), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
+                #                 curr_distance_obj['vincent']), " [difference::::>  ", str(difference), "  ]   >", \
+                #                 curr_distance_obj['adres'], "\n"
+                #         elif float(difference) < 30.0:
+                #             print "\n!!!!!!!!!!!!!! 20- 30 METROW)\nUWAGA[", str(
+                #                 COUNTER), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
+                #                 curr_distance_obj['vincent']), " [difference::::>  ", str(difference), "  ]   >", \
+                #                 curr_distance_obj['adres']
+                #             alarm(0)
+                #         else:
+                #
+                #             alarm(4)
+                #             print "\n\n" + 500 * "!!!" + "\n\n"
+                #             print "UWAGA PONAD 30M na minute[", str(
+                #                 COUNTER), "][R>1m][OBJEKT SIE ZBLIZA!!!!],[ODLEGLOSC:", str(
+                #                 curr_distance_obj['vincent']), " [difference::::>  ", str(difference), "  ]   >", \
+                #                 curr_distance_obj['adres']
 
                 #     # UNDER 2000 METER
                 #     if curr_distance_obj['vincent'] < 2000:
@@ -382,9 +367,7 @@ def runner():
                 #         curr_distance_obj['adres']
                 #     alarm(5)
             # print "INTERVAL:", str(interval)
-
-            # time.sleep(interval)
-            utils.timecounter(60)
+            time.sleep(interval)
             last_distance_obj = curr_distance_obj
 
     # LOOP STARTER
