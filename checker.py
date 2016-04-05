@@ -12,7 +12,7 @@ from __future__ import absolute_import
 import sys
 import time
 import datetime
-
+import utils
 import os
 from _exceptions.exceptions import *
 from pyicloud import PyiCloudService
@@ -255,26 +255,26 @@ def runner():
         speed_level = get_speed_level(difference)
         base = 120
 
-        # if speed_level > 0:
-        #     base_interval = base / speed_level
-        # else:
-        #     base_interval = 180
-        # if int(curr_distance_obj['vincent']) < 1500:
-        #     new_interval = [base_interval / 2, 0, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 5000:
-        #     new_interval = [base_interval, 1, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 10000:
-        #     new_interval = [base_interval * 2, 2, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 20000:
-        #     new_interval = [base_interval * 3, 3, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 40000:
-        #     new_interval = [base_interval * 4, 4, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 60000:
-        #     new_interval = [base_interval * 5, 5, speed_level]
-        # elif int(curr_distance_obj['vincent']) < 100000:
-        #     new_interval = [base_interval * 10, 6, speed_level]
-        # else:
-        #     new_interval = [60 * 60, 7]
+        if speed_level > 0:
+            base_interval = base / speed_level
+        else:
+            base_interval = 180
+        if int(curr_distance_obj['vincent']) < 1500:
+            new_interval = [base_interval / 2, 0, speed_level]
+        elif int(curr_distance_obj['vincent']) < 5000:
+            new_interval = [base_interval, 1, speed_level]
+        elif int(curr_distance_obj['vincent']) < 10000:
+            new_interval = [base_interval * 2, 2, speed_level]
+        elif int(curr_distance_obj['vincent']) < 20000:
+            new_interval = [base_interval * 3, 3, speed_level]
+        elif int(curr_distance_obj['vincent']) < 40000:
+            new_interval = [base_interval * 4, 4, speed_level]
+        elif int(curr_distance_obj['vincent']) < 60000:
+            new_interval = [base_interval * 5, 5, speed_level]
+        elif int(curr_distance_obj['vincent']) < 100000:
+            new_interval = [base_interval * 10, 6, speed_level]
+        else:
+            new_interval = [60 * 60, 7]
 
         log("[Next check interval => " + str(new_interval) + "sec.]")
         return new_interval
@@ -295,7 +295,13 @@ def runner():
             fo.write(str(datetime.datetime.now()) + "::::" + output)
             fo.close()
         except Exception as e:
-            print e
+            try:
+                fo = open("log.txt", "a")
+                fo.write(str(datetime.datetime.now()) + "::::" + output.encode("utf8") + "\n")
+                fo.close()
+            except Exception as ee:
+
+                print ee
 
 
 

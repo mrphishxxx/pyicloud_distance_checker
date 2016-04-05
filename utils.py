@@ -2,7 +2,6 @@
 # -*- encoding: utf-8 -*-
 import sys
 import time
-import settings
 
 
 def log(*args):
