@@ -12,3 +12,267 @@
 [ 11 ][i:30][Diff: 0 ][Dist: 6852][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]2016-04-06 00:04:24.158000::::
 [ 12 ][i:30][Diff: 0 ][Dist: 6852][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]2016-04-06 00:04:59.333000::::
 [ 1 ][i:30][Diff: 0 ][Dist: 6852][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-06 00:06:01.799000::::
+[ 2 ][i:30][Diff: 4 ][Dist: 6847][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-06 00:07:03.879000::::
+[ 3 ][i:30][Diff: 4 ][Dist: 6852][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-06 00:08:05.904000::::
+[ 4 ][i:30][Diff: 0 ][Dist: 6851][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-06 00:09:07.960000::::
+[ 5 ][i:30][Diff: 4 ][Dist: 6846][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-06 00:10:10.077000::::
+[ 6 ][i:30][Diff: 3 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-06 00:11:12.173000::::
+[ 7 ][i:30][Diff: 9 ][Dist: 6841][Adres: 36/2, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-06 00:12:14.343000::::
+[ 8 ][i:30][Diff: 10 ][Dist: 6851][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-06 00:13:16.390000::::
+[ 9 ][i:30][Diff: 3 ][Dist: 6848][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-06 00:28:39.633000::::
+[ 1 ][i:30][Diff: 0 ][Dist: 6848][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-06 00:30:04.753000::::
+[ 2 ][i:30][Diff: 860 ][Dist: 5988][Adres: 55, Powstańców Warszawy, Sopot Dolny, Sopot, pomorskie, 81-718, Polska]
+2016-04-06 00:31:29.734000::::
+[ 3 ][i:30][Diff: 596 ][Dist: 5391][Adres: 2, Jana Jerzego Haffnera, Sopot Górny, Sopot, pomorskie, 81-715, Polska]
+2016-04-06 00:32:54.740000::::
+[ 4 ][i:30][Diff: 870 ][Dist: 4521][Adres: Aleja Zwycięstwa, Kolibki, Orłowo, Gdynia, pomorskie, 81-553, Polska]
+2016-04-06 00:34:20.141000::::
+[ 5 ][i:30][Diff: 1240 ][Dist: 3280][Adres: 34, Światowida, Kolibki, Orłowo, Gdynia, pomorskie, 81-545, Polska]
+2016-04-06 00:35:45.283000::::
+[ 6 ][i:30][Diff: 1768 ][Dist: 1512][Adres: Aleja Zwycięstwa, Redłowo, Gdynia, pomorskie, 81-472, Polska]
+2016-04-06 00:37:09.284000::::
+[ 7 ][i:30][Diff: 889 ][Dist: 622][Adres: 11, Batalionów Chłopskich, Polanka Redłowska, Redłowo, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-471, Polska]
+2016-04-09 01:03:55.970000::::
+[ 1 ][i:30][Diff: 0 ][Dist: 6852][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:04:58.003000::::
+[ 2 ][i:30][Diff: 0 ][Dist: 6852][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:05:59.978000::::
+[ 3 ][i:30][Diff: 1 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:07:01.930000::::
+[ 4 ][i:30][Diff: 0 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:08:03.928000::::
+[ 5 ][i:30][Diff: 0 ][Dist: 6851][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:09:05.989000::::
+[ 6 ][i:30][Diff: 0 ][Dist: 6851][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:10:08.007000::::
+[ 7 ][i:30][Diff: 1 ][Dist: 6852][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:11:10.034000::::
+[ 8 ][i:30][Diff: 0 ][Dist: 6852][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:12:12.012000::::
+[ 9 ][i:30][Diff: 3 ][Dist: 6848][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:13:13.975000::::
+[ 10 ][i:30][Diff: 0 ][Dist: 6848][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:14:16::::
+[ 11 ][i:30][Diff: 2 ][Dist: 6851][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:15:17.960000::::
+[ 12 ][i:30][Diff: 1 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:16:19.951000::::
+[ 13 ][i:30][Diff: 0 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:17:21.959000::::
+[ 14 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:18:24.216000::::
+[ 15 ][i:30][Diff: 1 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:19:26.240000::::
+[ 16 ][i:30][Diff: 0 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:20:28.237000::::
+[ 17 ][i:30][Diff: 0 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:21:30.230000::::
+[ 18 ][i:30][Diff: 1 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:22:32.255000::::
+[ 19 ][i:30][Diff: 1 ][Dist: 6848][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:23:34.265000::::
+[ 20 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:24:36.321000::::
+[ 21 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:25:38.316000::::
+[ 22 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:26:40.313000::::
+[ 23 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:27:42.314000::::
+[ 24 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:28:44.294000::::
+[ 25 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:29:46.349000::::
+[ 26 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:30:48.322000::::
+[ 27 ][i:30][Diff: 0 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:31:50.744000::::
+[ 28 ][i:30][Diff: 0 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:32:56.494000::::
+[ 29 ][i:30][Diff: 0 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:33:58.488000::::
+[ 30 ][i:30][Diff: 1 ][Dist: 6851][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:35:00.559000::::
+[ 31 ][i:30][Diff: 10 ][Dist: 6841][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:36:02.581000::::
+[ 32 ][i:30][Diff: 8 ][Dist: 6850][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:37:04.773000::::
+[ 33 ][i:30][Diff: 0 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:38:07.030000::::
+[ 34 ][i:30][Diff: 0 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:39:09.182000::::
+[ 35 ][i:30][Diff: 0 ][Dist: 6851][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:40:11.543000::::
+[ 36 ][i:30][Diff: 4 ][Dist: 6846][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:41:13.573000::::
+[ 37 ][i:30][Diff: 2 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:42:15.538000::::
+[ 38 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:43:17.497000::::
+[ 39 ][i:30][Diff: 2 ][Dist: 6852][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:44:20.005000::::
+[ 40 ][i:30][Diff: 5 ][Dist: 6846][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:45:22.207000::::
+[ 41 ][i:30][Diff: 0 ][Dist: 6846][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:46:24.795000::::
+[ 42 ][i:30][Diff: 3 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:47:27.829000::::
+[ 43 ][i:30][Diff: 8 ][Dist: 6841][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:48:29.853000::::
+[ 44 ][i:30][Diff: 11 ][Dist: 6852][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:49:31.906000::::
+[ 45 ][i:30][Diff: 2 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:50:34.212000::::
+[ 46 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:51:36.730000::::
+[ 47 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:52:38.998000::::
+[ 48 ][i:30][Diff: 1 ][Dist: 6848][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:53:41.160000::::
+[ 49 ][i:30][Diff: 0 ][Dist: 6848][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:54:43.437000::::
+[ 50 ][i:30][Diff: 2 ][Dist: 6846][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:55:45.641000::::
+[ 51 ][i:30][Diff: 0 ][Dist: 6846][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:56:47.772000::::
+[ 52 ][i:30][Diff: 4 ][Dist: 6851][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:57:50.832000::::
+[ 53 ][i:30][Diff: 8 ][Dist: 6842][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:58:52.986000::::
+[ 54 ][i:30][Diff: 2 ][Dist: 6844][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 01:59:55.534000::::
+[ 55 ][i:30][Diff: 2 ][Dist: 6847][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:00:57.718000::::
+[ 56 ][i:30][Diff: 0 ][Dist: 6847][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:01:59.750000::::
+[ 57 ][i:30][Diff: 0 ][Dist: 6847][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:03:01.778000::::
+[ 58 ][i:30][Diff: 0 ][Dist: 6847][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:04:03.787000::::
+[ 59 ][i:30][Diff: 0 ][Dist: 6847][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:05:05.863000::::
+[ 60 ][i:30][Diff: 4 ][Dist: 6851][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:06:07.937000::::
+[ 61 ][i:30][Diff: 2 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:07:10.028000::::
+[ 62 ][i:30][Diff: 0 ][Dist: 6850][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:08:12.124000::::
+[ 63 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:09:14.167000::::
+[ 64 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:10:16.314000::::
+[ 65 ][i:30][Diff: 0 ][Dist: 6849][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:11:18.544000::::
+[ 66 ][i:30][Diff: 1 ][Dist: 6848][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:12:20.617000::::
+[ 67 ][i:30][Diff: 0 ][Dist: 6848][Adres: 36, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:13:22.684000::::
+[ 68 ][i:30][Diff: 16 ][Dist: 6864][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:14:24.768000::::
+[ 69 ][i:30][Diff: 0 ][Dist: 6864][Adres: 38, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:15:28.884000::::
+[ 70 ][i:30][Diff: 27 ][Dist: 6837][Adres: 42, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:16:31.104000::::
+[ 71 ][i:30][Diff: 5 ][Dist: 6832][Adres: 44, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-759, Polska]
+2016-04-09 02:17:43.262000::::
+[ 72 ][i:30][Diff: 57 ][Dist: 6889][Adres: 13, Generała Kazimierza Pułaskiego, Sopot Dolny, Sopot, pomorskie, 81-760, Polska]
+2016-04-09 02:18:55.385000::::
+[ 73 ][i:30][Diff: 64 ][Dist: 6825][Adres: Dom Handlowy Monte, 25, Bohaterów Monte Cassino, Sopot Dolny, Sopot, pomorskie, 81-767, Polska]
+2016-04-09 02:20:20.447000::::
+[ 74 ][i:30][Diff: 291 ][Dist: 6534][Adres: 818, Aleja Niepodległości, Sopot Dolny, Sopot, pomorskie, 81-809, Polska]
+2016-04-09 02:21:45.621000::::
+[ 75 ][i:30][Diff: 1041 ][Dist: 5492][Adres: Aleja Niepodległości, Sopot Górny, Sopot, pomorskie, 81-806, Polska]
+2016-04-09 02:23:10.720000::::
+[ 76 ][i:30][Diff: 1449 ][Dist: 4043][Adres: Aleja Zwycięstwa, Kolibki, Orłowo, Gdynia, pomorskie, 81-553, Polska]
+2016-04-09 02:24:35.756000::::
+[ 77 ][i:30][Diff: 1353 ][Dist: 2690][Adres: 220, Aleja Zwycięstwa, Kolibki, Orłowo, Gdynia, pomorskie, 81-540, Polska]
+2016-04-09 02:25:59.811000::::
+[ 78 ][i:30][Diff: 1969 ][Dist: 721][Adres: 50, Redłowska, Polanka Redłowska, Redłowo, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-408, Polska]
+2016-04-09 02:27:00.910000::::
+[ 79 ][i:30][Diff: 10 ][Dist: 731][Adres: Alma, 41, Redłowska, Redłowo, Gdynia, pomorskie, 81-408, Polska]
+2016-04-09 02:28:24.983000::::
+[ 80 ][i:30][Diff: 709 ][Dist: 22][Adres: 4, Władysława Syrokomli, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:29:26.038000::::
+[ 81 ][i:30][Diff: 1 ][Dist: 23][Adres: 4, Władysława Syrokomli, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:30:27.061000::::
+[ 82 ][i:30][Diff: 15 ][Dist: 8][Adres: 67, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:31:28.080000::::
+[ 83 ][i:30][Diff: 16 ][Dist: 24][Adres: 4, Władysława Syrokomli, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:32:29.210000::::
+[ 84 ][i:30][Diff: 0 ][Dist: 24][Adres: 4, Władysława Syrokomli, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:33:30.265000::::
+[ 85 ][i:30][Diff: 5 ][Dist: 19][Adres: 67, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:34:31.318000::::
+[ 86 ][i:30][Diff: 6 ][Dist: 13][Adres: 67, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:35:32.341000::::
+[ 87 ][i:30][Diff: 0 ][Dist: 13][Adres: 67, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:36:33.445000::::
+[ 88 ][i:30][Diff: 3 ][Dist: 17][Adres: 65, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:37:34.552000::::
+[ 89 ][i:30][Diff: 0 ][Dist: 17][Adres: 65, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:38:35.569000::::
+[ 90 ][i:30][Diff: 0 ][Dist: 18][Adres: 67, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:39:36.603000::::
+[ 91 ][i:30][Diff: 2 ][Dist: 15][Adres: 67, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:40:37.598000::::
+[ 92 ][i:30][Diff: 1 ][Dist: 13][Adres: 67, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:41:38.614000::::
+[ 93 ][i:30][Diff: 1 ][Dist: 15][Adres: 65, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:42:39.689000::::
+[ 94 ][i:30][Diff: 4 ][Dist: 10][Adres: 67, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-09 02:43:40.744000::::
+[ 95 ][i:30][Diff: 8 ][Dist: 19][Adres: 67, Legionów, Polanka Redłowska, Wzgórze Świętego Maksymiliana, Gdynia, pomorskie, 81-404, Polska]
+2016-04-17 02:47:53.823000::::
+[ 1 ][i:30][Diff: 0 ][Dist: 5969][Adres: 7, Wosia Budzysza, Sopot Dolny, Sopot, pomorskie, 81-715, Polska]2016-04-17 02:48:55.922000::::
+[ 2 ][i:30][Diff: 0 ][Dist: 5969][Adres: 7, Wosia Budzysza, Sopot Dolny, Sopot, pomorskie, 81-715, Polska]2016-04-17 02:50:02.948000::::
+[ 3 ][i:30][Diff: 45 ][Dist: 5924][Adres: 2, Wosia Budzysza, Sopot Dolny, Sopot, pomorskie, 81-715, Polska]2016-04-17 02:56:17.716000::::
+[ 1 ][i:30][Diff: 0 ][Dist: 5899][Adres: Siłownia bezpłatna, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 02:57:21.733000::::
+[ 2 ][i:30][Diff: 22 ][Dist: 5877][Adres: Aleja Franciszka Mamuszki, Sopot Dolny, Sopot, pomorskie, 81-718, Polska]2016-04-17 02:58:25.831000::::
+[ 3 ][i:30][Diff: 26 ][Dist: 5850][Adres: 21, Aleja Franciszka Mamuszki, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]2016-04-17 02:59:29.865000::::
+[ 4 ][i:30][Diff: 23 ][Dist: 5826][Adres: 21, Aleja Franciszka Mamuszki, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]2016-04-17 03:00:48.982000::::
+[ 5 ][i:30][Diff: 91 ][Dist: 5735][Adres: 22, Aleja Franciszka Mamuszki, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]2016-04-17 03:02:01.004000::::
+[ 6 ][i:30][Diff: 65 ][Dist: 5670][Adres: 22, Aleja Franciszka Mamuszki, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]2016-04-17 03:03:03.054000::::
+[ 7 ][i:30][Diff: 0 ][Dist: 5671][Adres: 22, Aleja Franciszka Mamuszki, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]2016-04-17 03:04:15.588000::::
+[ 8 ][i:30][Diff: 62 ][Dist: 5734][Adres: 22, Aleja Franciszka Mamuszki, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]2016-04-17 03:05:34.755000::::
+[ 9 ][i:30][Diff: 109 ][Dist: 5843][Adres: Siłownia bezpłatna, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:06:53.873000::::
+[ 10 ][i:30][Diff: 77 ][Dist: 5921][Adres: Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:08:13.377000::::
+[ 11 ][i:30][Diff: 90 ][Dist: 6011][Adres: Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:09:25.511000::::
+[ 12 ][i:30][Diff: 50 ][Dist: 6062][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:10:27.695000::::
+[ 13 ][i:30][Diff: 0 ][Dist: 6062][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:11:31.849000::::
+[ 14 ][i:30][Diff: 23 ][Dist: 6085][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:12:35.901000::::
+[ 15 ][i:30][Diff: 25 ][Dist: 6059][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:13:37.955000::::
+[ 16 ][i:30][Diff: 0 ][Dist: 6058][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:14:29.973000::::
+[ 1 ][i:30][Diff: 0 ][Dist: 6068][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:15:30.657000::::
+[ 2 ][i:30][Diff: 44 ][Dist: 6023][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:16:31.367000::::
+[ 3 ][i:30][Diff: 39 ][Dist: 6063][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:17:32.069000::::
+[ 4 ][i:30][Diff: 12 ][Dist: 6050][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:18:32.842000::::
+[ 5 ][i:30][Diff: 28 ][Dist: 6021][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:19:33.785000::::
+[ 6 ][i:30][Diff: 52 ][Dist: 6074][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:20:34.479000::::
+[ 7 ][i:30][Diff: 1 ][Dist: 6075][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]
+2016-04-17 03:21:35.164000::::
+[ 8 ][i:30][Diff: 13 ][Dist: 6062][Adres: Park Północny, Aleja Stanisława Horno-Popławskiego, Sopot Dolny, Sopot, pomorskie, 81-712, Polska]

@@ -21,6 +21,17 @@ from geopy.distance import vincenty
 from geopy.distance import great_circle
 import mp3play
 
+
+import subprocess
+import multiprocessing
+import json
+import glob
+import shutil
+import threading
+import time as imported_time
+# from datetime import datetim
+
+
 CONSOLE_LOG = False
 DEBUGGING = False
 SYRKOMLI = {
@@ -140,6 +151,120 @@ def distance_handler(location_obj):
 
 FIRSTRUN = True
 
+# class UFGThread (threading.Thread):
+#     def __init__(self, plate):
+#         threading.Thread.__init__(self)
+#         self.name = plate
+#
+#     def run(self):
+#         debug_log( "[THREAD UFG]> Starting " + self.name)
+#         self.process_ufg(self.name)
+#         debug_log( "[THREAD UFG]> Exiting " + self.name)
+#
+#     def process_ufg(self, plate):
+#         global UFG, EXIT_FLAG
+#         finished_flag = False
+#         UFG["status"] = 1
+#
+#         while not finished_flag:
+#             if EXIT_FLAG:
+#                 plate.exit()
+#
+#             debug_log( "[THREAD UFG]>  %s: %s" % (plate, imported_time.ctime(imported_time.time())))
+#             output = subprocess.Popen(["python", "UFGRequestor.py", plate, "-d"],
+#                                       cwd="/home/theta/alpr-ufg",
+#                                               stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=False)
+#             stdout, stderr = output.communicate()
+#             UFG["result"] = json.loads(stdout[stdout.find("{"):stdout.find("}") + 1]) if stdout.find("}") > 0 else "failed"
+#             UFG["status"] = 2
+#             finished_flag = True
+
+
+
+    #
+    # def run_camera_capture_thread(self):
+    #     thread_cam = CAMThread()
+    #     thread_cam.start()
+
+class SoundThread (threading.Thread):
+    def __init__(self, sound=None, type=None):
+        threading.Thread.__init__(self)
+        self.soundpath = soundpath
+
+    def run(self):
+        clip = mp3play.load(self.soundpath)
+        clip.play()
+        time.sleep(min(30, clip.seconds()))
+        clip.stop()
+
+    # def alarm(sound=None, type=None):
+    #     THIS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__)))
+    #
+    # def get_speed_sound(level):
+    #     speed_level_sound_obj = {
+    #         0: '0_Blop-Mark_DiAngelo-79054334.mp3',
+    #         1: '1_Cartoon Walking-SoundBible.com-2130722123.mp3',
+    #         2: '2_Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3',
+    #         3: '3_Galloping Horse-SoundBible.com-1411555122.mp3',
+    #         4: '4_CarAcceleratingSoundBible.com-28596349.mp3',
+    #         5: '5_Train_Approach_n_Pass-Mike_Koenig-678807208.mp3',
+    #         6: '6_Healicopter_Approach-Mike_Koenig-1395051800.mp3',
+    #     }
+    #     sound_path = os.path.abspath(os.path.join(THIS_DIR, 'sounds', 'SPEED', speed_level_sound_obj[level]))
+    #     return sound_path
+    #
+    # def get_speak_sound(level):
+    #     spoken_sound_obj = {
+    #         0: 'mniejniz2km.mp3',
+    #         1: 'mniejniz4.mp3',
+    #         2: 'objectsiezbliza.mp3',
+    #         3: 'objectsiezblizaszybko.mp3',
+    #         4: 'objektznajdujesiewodleglosc.mp3'
+    #     }
+    #
+    #     sound_path = os.path.abspath(os.path.join(THIS_DIR, 'sounds', 'SPEAK', spoken_sound_obj[level]))
+    #     return sound_path
+    #
+    # def get_alarm_sound(level):
+    #     alarm_sound_obj = {
+    #         0: '0_Woosh-Mark_DiAngelo-4778593.mp3',
+    #         1: '1_35752^CarAlarmSet.mp3',
+    #         2: '2_91540^caralarm.mp3',
+    #         3: '3_24483^pchick-alarm.mp3',
+    #         4: '4_71766^alarm.mp3',
+    #         5: '5_44216^alarm.mp3',
+    #         6: '6_86502^alarm.mp3',
+    #         7: '7_97744^ALARM.mp3'
+    #     }
+    #
+    #     sound_path = os.path.abspath(os.path.join(THIS_DIR, 'sounds', 'ALARMS', alarm_sound_obj[level]))
+    #     return sound_path
+    #
+    # def playerOLD(filename):
+    #     clip = mp3play.load(filename)
+    #     clip.play()
+    #     time.sleep(min(30, clip.seconds()))
+    #     clip.stop()
+    #
+    # def player(filename):
+    #     thread_cam = SoundThread(filename)
+    #     thread_cam.start()
+    #
+    #     # clip = mp3play.load(filename)
+    #     # clip.play()
+    #     # time.sleep(min(30, clip.seconds()))
+    #     # clip.stop()
+    #
+    # if type == "speed":
+    #     log("speed alarm nr:" + str(sound))
+    #     player(get_speed_sound(sound))
+    # elif type == "speak":
+    #     log("speed alarm nr:" + str(sound))
+    #     player(get_speak_sound(sound))
+    # else:
+    #     log("alarm nr:" + str(sound))
+    #     player(get_alarm_sound(sound))
+
 
 def alarm(sound=None, type=None):
     THIS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__)))
@@ -184,12 +309,20 @@ def alarm(sound=None, type=None):
         sound_path = os.path.abspath(os.path.join(THIS_DIR, 'sounds', 'ALARMS', alarm_sound_obj[level]))
         return sound_path
 
-
     def player(filename):
         clip = mp3play.load(filename)
         clip.play()
         time.sleep(min(30, clip.seconds()))
         clip.stop()
+    #
+    # def player(filename):
+    #     thread_cam = SoundThread(filename)
+    #     thread_cam.start()
+
+        # clip = mp3play.load(filename)
+        # clip.play()
+        # time.sleep(min(30, clip.seconds()))
+        # clip.stop()
 
     if type == "speed":
         log("speed alarm nr:" + str(sound))
@@ -288,7 +421,10 @@ def runner():
             print output
         except Exception as e:
             print e
-            raise
+            try:
+                print output.encode('utf8')
+            except Exception as e:
+                print e
 
         try:
             fo = open("log.txt", "a")
@@ -311,6 +447,7 @@ def runner():
         interval, counter = 60, 0
         last_distance_obj = current_location_obj
 
+
         while True:
             counter += 1
             location = api.iphone.location()
@@ -327,7 +464,10 @@ def runner():
                 raise IntervalException("raise_INTERVAL_exception")
 
             try:
-                alarm(speed_level, "speed")
+                thread_cam = SoundThread(speed_level, "speed")
+                thread_cam.start()
+                # alarm(speed_level, "speed")
+                print "odpalono threada"
                 alarm(interval_level, "")
             except Exception:
                 raise AlarmException("raise_ALARM_exception")

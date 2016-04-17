@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bbf1d21-6653-45c3-b96c-74e1443fb1c5" name="Default" comment="update">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checker.py" afterPath="$PROJECT_DIR$/checker.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pyicloud_distance_checker.iws" />
@@ -29,8 +27,8 @@
       <file leaf-file-name="checker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/checker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44755244">
-              <caret line="285" column="39" selection-start-line="285" selection-start-column="39" selection-end-line="285" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.55744255">
+              <caret line="290" column="17" selection-start-line="290" selection-start-column="17" selection-end-line="290" selection-end-column="17" />
               <folding>
                 <element signature="e#229#267#0" expanded="true" />
                 <element signature="e#785#971#0" expanded="false" />
@@ -51,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/log.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -182,7 +180,6 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
     <option name="width" value="2572" />
     <option name="height" value="1416" />
   </component>
@@ -484,11 +481,23 @@
       <option name="project" value="LOCAL" />
       <updated>1459892920106</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <created>1459893881905</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1459893881905</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update">
+      <created>1459893917035</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1459893917035</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2572" height="1416" extended-state="0" />
+    <frame x="-8" y="0" width="2572" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25638977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -885,7 +894,7 @@
     <entry file="file://$PROJECT_DIR$/log.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -902,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44755244">
-          <caret line="285" column="39" selection-start-line="285" selection-start-column="39" selection-end-line="285" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.55744255">
+          <caret line="290" column="17" selection-start-line="290" selection-start-column="17" selection-end-line="290" selection-end-column="17" />
           <folding>
             <element signature="e#229#267#0" expanded="true" />
             <element signature="e#785#971#0" expanded="false" />
